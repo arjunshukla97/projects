@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 
-@Table(name="crud")
+@Table(name="topic")
 public class Topic {
 
 	@Id
