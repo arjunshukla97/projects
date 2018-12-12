@@ -1,17 +1,25 @@
 package com.arjun.springboot.topic;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+
+@Table(name="crud")
 public class Topic {
 
 	@Id
+	 @Column(name="id")
 	private String id;
 	
+	@Column(name="name")
 	private String name;
+	
+	@Column(name="description")
 	private String description;
 	
 	public Topic() {
@@ -47,4 +55,12 @@ public class Topic {
 		this.description = description;
 	}
 	
+	
+	
+	
+	@Override
+	 public String toString() {
+	  return "crud [id=" + id + ", name=" + name
+	    + ", description=" + description +  "]";
+}
 }
